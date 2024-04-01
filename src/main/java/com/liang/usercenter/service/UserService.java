@@ -19,7 +19,7 @@ public interface UserService extends IService<User> {
      * @param rePasswd    二次输入密码
      * @return 用户id
      */
-    long resister(String userAccount, String passwd, String rePasswd);
+    long resister(String userAccount, String passwd, String rePasswd/*, String planetCode*/);
 
     /**
      * 用户登录
@@ -35,4 +35,11 @@ public interface UserService extends IService<User> {
      * @return
      */
     User getUser(User user);
+
+    /**
+     * 用户注销
+     * @param request
+     * @return
+     */
+    int logout(HttpServletRequest request);
 }

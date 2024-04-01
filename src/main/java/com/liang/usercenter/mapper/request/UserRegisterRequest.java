@@ -14,6 +14,7 @@ public class UserRegisterRequest implements Serializable {
     private String userAccount;
     private String passwd;
     private String rePasswd;
+    private String planetCode;
 
     @Serial
     private static final long serialVersionUID = -2199815645562430502L;

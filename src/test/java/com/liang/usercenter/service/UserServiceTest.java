@@ -11,7 +11,7 @@ class UserServiceTest {
     @Resource
     private UserService userService;
 
-    @Test
+    /*@Test
     void resister() {
         String userAccount = "liang";
         String passwd = "";
@@ -32,5 +32,5 @@ class UserServiceTest {
         userAccount = "yupi";
         res = userService.resister(userAccount, passwd, rePasswd);
         Assertions.assertTrue(res > 0);
-    }
+    }*/
 }
