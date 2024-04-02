@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://onlinedatabase?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  # 设置session过期时间
+  session:
+    timeout: 86400
