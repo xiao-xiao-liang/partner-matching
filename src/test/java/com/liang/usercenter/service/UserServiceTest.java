@@ -1,9 +1,14 @@
 package com.liang.usercenter.service;
 
+import com.baomidou.mybatisplus.core.toolkit.Assert;
+import com.liang.usercenter.model.User;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootTest
 class UserServiceTest {
@@ -33,4 +38,11 @@ class UserServiceTest {
         res = userService.resister(userAccount, passwd, rePasswd);
         Assertions.assertTrue(res > 0);
     }*/
+
+    @Test
+    public void searchUserByTags() {
+        List<String> tagNameList = List.of("java", "c++");
+        List<User> userList = userService.searchUserByTags(tagNameList);
+        Assertions.assertNotNull(userList);
+    }
 }

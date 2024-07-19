@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 /**
@@ -81,9 +83,14 @@ public class User implements Serializable {
     private Integer roles;
 
     /**
-     * 星球编号
+     * 用户标签
      */
-    private String planetCode;
+    private String tags;
+
+    /**
+     * 用户介绍
+     */
+    private String introduction;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

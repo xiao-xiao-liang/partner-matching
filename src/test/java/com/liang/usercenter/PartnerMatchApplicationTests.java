@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @SpringBootTest
-class UserCenterApplicationTests {
+class PartnerMatchApplicationTests {
 
 	@Test
 	void testRegex() {
