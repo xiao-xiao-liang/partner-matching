@@ -1,13 +1,11 @@
 package com.liang.usercenter.service;
 
-import com.baomidou.mybatisplus.core.toolkit.Assert;
-import com.liang.usercenter.model.User;
+import com.liang.usercenter.model.entity.User;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest

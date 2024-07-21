@@ -8,7 +8,7 @@ import com.liang.usercenter.common.ErrorCode;
 import com.liang.usercenter.constant.UserConstant;
 import com.liang.usercenter.exception.BusinessException;
 import com.liang.usercenter.mapper.UserMapper;
-import com.liang.usercenter.model.User;
+import com.liang.usercenter.model.entity.User;
 import com.liang.usercenter.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;

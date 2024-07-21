@@ -1,24 +1,21 @@
-package com.liang.usercenter.model;
+package com.liang.usercenter.model.vo;
 
-import com.baomidou.mybatisplus.annotation.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
-
-/**
- *
- * @TableName user
- */
-@TableName(value ="user")
 @Data
-public class User implements Serializable {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserVO implements Serializable {
     /**
      * 用户id
      */
-    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -40,11 +37,6 @@ public class User implements Serializable {
      * 性别
      */
     private Integer gender;
-
-    /**
-     * 密码
-     */
-    private String passwd;
 
     /**
      * 电话
@@ -72,12 +64,6 @@ public class User implements Serializable {
     private Date updateTime;
 
     /**
-     * 是否删除
-     */
-    @TableLogic
-    private Integer deleted;
-
-    /**
      * 用户身份，0普通用户，1管理员
      */
     private Integer roles;
@@ -91,7 +77,4 @@ public class User implements Serializable {
      * 用户介绍
      */
     private String introduction;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 }

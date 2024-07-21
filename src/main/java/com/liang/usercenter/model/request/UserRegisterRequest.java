@@ -1,4 +1,4 @@
-package com.liang.usercenter.mapper.request;
+package com.liang.usercenter.model.request;
 
 import lombok.Data;
 

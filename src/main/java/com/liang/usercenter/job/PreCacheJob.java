@@ -2,7 +2,7 @@ package com.liang.usercenter.job;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.liang.usercenter.model.User;
+import com.liang.usercenter.model.entity.User;
 import com.liang.usercenter.service.UserService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

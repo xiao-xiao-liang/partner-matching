@@ -1,14 +1,10 @@
 package com.liang.usercenter.once;
 
 import com.liang.usercenter.mapper.UserMapper;
-import com.liang.usercenter.model.User;
+import com.liang.usercenter.model.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
-
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @Component
 public class InsertUsers {

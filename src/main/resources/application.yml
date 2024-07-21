@@ -50,3 +50,4 @@ springdoc:
     - group: 'default'
       paths-to-match: '/**'
       packages-to-scan: com.liang.usercenter.controller
+

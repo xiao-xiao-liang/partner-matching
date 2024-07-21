@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liang.usercenter.mapper.TeamMapper">
+
+    <resultMap id="BaseResultMap" type="com.liang.usercenter.model.entity.Team">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="maxNum" column="max_num" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="deleted" column="deleted" jdbcType="TINYINT"/>
+            <result property="expireTime" column="expire_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,description,
+        max_num,user_id,status,
+        password,deleted,expire_time,
+        create_time,update_time
+    </sql>
+
+    <select id="listTeam" resultType="com.liang.usercenter.model.vo.TeamVO">
+        select team.*, user_team.user_id from user_team, team
+        where team.id = user_team.team_id
+        <if test="userId != null">
+            and user_team.user_id = #{userId}
+        </if>
+        <if test="status != null">
+            and team.status = #{status}
+        </if>
+    </select>
+</mapper>

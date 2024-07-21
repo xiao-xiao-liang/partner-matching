@@ -1,6 +1,6 @@
 package com.liang.usercenter.service;
 
-import com.liang.usercenter.model.User;
+import com.liang.usercenter.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import jakarta.servlet.http.HttpServletRequest;
 
